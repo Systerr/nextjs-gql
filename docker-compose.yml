@@ -1,0 +1,13 @@
+services:
+  footiumFrontend:
+    image: node:latest
+    volumes:
+      - ./:/var/www/
+    working_dir: /var/www
+    ports:
+      - 3000:3000
+      - 9229:9229
+
+    environment:
+      - NODE_ENV=development
+    command: 'npm run docker'
